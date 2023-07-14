@@ -2,55 +2,162 @@
 
 namespace testeSuites
 {
-    // Um exemplo de uso do sistema de hotel, criando uma instância do sistema com um repositório em memória e realizando algumas operações
     class Program
     {
         static void Main()
         {
-            // Criando uma instância do sistema de hotel com um repositório em memória
             HotelSystem system = new(new InMemorySuiteRepository());
+            SetupSuites();
+            PromptMenu();
 
-            // Criando e adicionando algumas suítes ao repositório
-            system.CreateSuite("simples", 101);
-            system.CreateSuite("simples", 102);
-            system.CreateSuite("luxo", 201);
-            system.CreateSuite("luxo", 202);
-            system.CreateSuite("presidencial", 301);
-            system.CreateSuite("simples", 103);
-            system.CreateSuite("simples", 104);
-            system.CreateSuite("luxo", 203);
-            system.CreateSuite("luxo", 204);
-            system.CreateSuite("presidencial", 302);
+            void SetupSuites()
+            {
+                for (int i = 100; i <= 199; i++)
+                {
+                    system.CreateSuite("simples", i);
+                }
 
-            // Mostrando os status das suítes
-            system.ShowStatus();
+                for (int i = 200; i <= 280; i++)
+                {
+                    system.CreateSuite("luxo", i);
+                }
 
-            // Reservando algumas suítes
-            system.ReserveSuite(101);
-            system.ReserveSuite(201);
-            system.ReserveSuite(301);
+                for (int i = 300; i <= 330; i++)
+                {
+                    system.CreateSuite("presidencial", i);
+                }
+            }
+            void PromptMenu()
+            {
+                while (true)
+                {
+                    int opt = MainMenuOpt();
 
-            // Mostrando os status das suítes
-            system.ShowStatus();
+                    switch (opt)
+                    {
+                        case 1:
+                            Option1();
+                            break;
+                        case 2:
+                            Option2();
+                            break;
+                        case 3:
+                            Option3();
+                            break;
+                        case 4:
+                            Option4();
+                            break;
+                        case 5:
+                            Option5();
+                            break;
+                        default:
+                            Console.WriteLine("\nOpção incorreta. Tente novamente.\n");
+                            break;
+                    }
+                }
+            }
+            int MainMenuOpt()
+            {
+                Console.WriteLine("\n---- SISTEMA DE RESERVAS ----\n");
+                Console.WriteLine("\n            MENU   \n");
+                Console.WriteLine("  1.  Reservar suíte");
+                Console.WriteLine("  2.  Cancelar reserva");
+                Console.WriteLine("\n  3.  Ocupar suíte");
+                Console.WriteLine("  4.  Liberar suíte");
+                Console.WriteLine("\n  5.  Mostrar suítes");
+                Console.Write("\nDigite uma opção: ");
 
-            // Cancelando a reserva de uma suíte
-            system.CancelReservation(201);
+                if (int.TryParse(Console.ReadLine(), out int opt))
+                {
+                    return opt;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
 
-            // Ocupando algumas suítes
-            system.OccupySuite(101);
-            system.OccupySuite(202);
+            void Option1()
+            {
+                Console.Clear();
+                Console.Write("\nInsira o número da suíte que deseja RESERVAR: ");
 
-            // Mostrando os status das suítes
-            system.ShowStatus();
+                if (int.TryParse(Console.ReadLine(), out int n))
+                {
+                    Console.WriteLine("");
+                    system.ReserveSuite(n);
+                    Console.WriteLine("\n\nAperte qualquer tecla para voltar ao menu.");
+                    Console.ReadLine();
+                    Console.Clear();
+                }
+                else
+                {
+                    Console.WriteLine("\nEntrada inválida. Tente novamente.\n");
+                }
+            }
+            void Option2()
+            {
+                Console.Clear();
+                Console.Write("\nInsira o número da suíte que deseja CANCELAR reserva: ");
 
-            // Liberando uma suíte
-            system.ReleaseSuite(101);
+                if (int.TryParse(Console.ReadLine(), out int n))
+                {
+                    Console.WriteLine("");
+                    system.CancelReservation(n);
+                    Console.WriteLine("\n\nAperte qualquer tecla para voltar ao menu.");
+                    Console.ReadLine();
+                    Console.Clear();
+                }
+                else
+                {
+                    Console.WriteLine("\nEntrada inválida. Tente novamente.\n");
+                }
+            }
+            void Option3()
+            {
+                Console.Clear();
+                Console.Write("\nInsira o número da suíte que deseja OCUPAR: ");
 
-            // Removendo uma suíte do repositório
-            system.DeleteSuite(301);
+                if (int.TryParse(Console.ReadLine(), out int n))
+                {
+                    Console.WriteLine("");
+                    system.OccupySuite(n);
+                    Console.WriteLine("\n\nAperte qualquer tecla para voltar ao menu.");
+                    Console.ReadLine();
+                    Console.Clear();
+                }
+                else
+                {
+                    Console.WriteLine("\nEntrada inválida. Tente novamente.\n");
+                }
+            }
+            void Option4()
+            {
+                Console.Clear();
+                Console.Write("\nInsira o número da suíte que deseja LIBERAR: ");
 
-            // Mostrando os status das suítes
-            system.ShowStatus();
+                if (int.TryParse(Console.ReadLine(), out int n))
+                {
+                    Console.WriteLine("");
+                    system.ReleaseSuite(n);
+                    Console.WriteLine("\n\nAperte qualquer tecla para voltar ao menu.");
+                    Console.ReadLine();
+                    Console.Clear();
+                }
+                else
+                {
+                    Console.WriteLine("\nEntrada inválida. Tente novamente.\n");
+                }
+            }
+            void Option5()
+            {
+                Console.Clear();
+                Console.WriteLine("\n            SUÍTES   \n");
+                system.ShowStatus();
+                Console.WriteLine("\n\nAperte qualquer tecla para voltar ao menu.");
+                Console.ReadLine();
+                Console.Clear();
+            }
         }
     }
 }

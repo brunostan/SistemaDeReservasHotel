@@ -7,12 +7,12 @@ namespace testeSuites.Entities
     public class HotelSystem
     {
         // Um campo privado para armazenar a referência ao repositório de suítes
-        private readonly ISuiteRepository repository;
+        private readonly ISuiteRepository Repository;
 
         // O construtor da classe, que recebe uma instância de ISuiteRepository como parâmetro e atribui ao campo privado
         public HotelSystem(ISuiteRepository repository)
         {
-            this.repository = repository ?? throw new ArgumentNullException(nameof(repository));
+            Repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
 
         // Um método público para criar e adicionar uma nova suíte ao repositório, recebendo o tipo e o número da suíte como parâmetros
@@ -38,7 +38,7 @@ namespace testeSuites.Entities
             };
 
             // Usando o método Add do repositório para adicionar a suíte criada
-            repository.Add(suite);
+            Repository.Add(suite);
         }
 
         // Um método público para remover uma suíte existente do repositório, recebendo o número da suíte como parâmetro
@@ -50,10 +50,10 @@ namespace testeSuites.Entities
             }
 
             // Usando o método GetByNumber do repositório para obter a suíte pelo seu número
-            ISuite suite = repository.GetByNumber(number) ?? throw new ArgumentException($"A suíte {number} não existe no repositório.");
+            ISuite suite = Repository.GetByNumber(number) ?? throw new ArgumentException($"A suíte {number} não existe no repositório.");
 
             // Usando o método Remove do repositório para remover a suíte obtida
-            repository.Remove(suite);
+            Repository.Remove(suite);
         }
 
         // Um método público para reservar uma suíte existente, recebendo o número da suíte como parâmetro
@@ -65,7 +65,7 @@ namespace testeSuites.Entities
             }
 
             // Usando o método GetByNumber do repositório para obter a suíte pelo seu número
-            ISuite suite = repository.GetByNumber(number) ?? throw new ArgumentException($"A suíte {number} não existe no repositório.");
+            ISuite suite = Repository.GetByNumber(number) ?? throw new ArgumentException($"A suíte {number} não existe no repositório.");
 
             // Usando o método Reserve da suíte para reservá-la
             suite.Reserve();
@@ -80,7 +80,7 @@ namespace testeSuites.Entities
             }
 
             // Usando o método GetByNumber do repositório para obter a suíte pelo seu número
-            ISuite suite = repository.GetByNumber(number) ?? throw new ArgumentException($"A suíte {number} não existe no repositório.");
+            ISuite suite = Repository.GetByNumber(number) ?? throw new ArgumentException($"A suíte {number} não existe no repositório.");
 
             // Usando o método Cancel da suíte para cancelar a reserva
             suite.Cancel();
@@ -95,7 +95,7 @@ namespace testeSuites.Entities
             }
 
             // Usando o método GetByNumber do repositório para obter a suíte pelo seu número
-            ISuite suite = repository.GetByNumber(number) ?? throw new ArgumentException($"A suíte {number} não existe no repositório.");
+            ISuite suite = Repository.GetByNumber(number) ?? throw new ArgumentException($"A suíte {number} não existe no repositório.");
 
             // Usando o método Occupy da suíte para ocupá-la
             suite.Occupy();
@@ -110,7 +110,7 @@ namespace testeSuites.Entities
             }
 
             // Usando o método GetByNumber do repositório para obter a suíte pelo seu número
-            ISuite suite = repository.GetByNumber(number) ?? throw new ArgumentException($"A suíte {number} não existe no repositório.");
+            ISuite suite = Repository.GetByNumber(number) ?? throw new ArgumentException($"A suíte {number} não existe no repositório.");
 
             // Usando o método Release da suíte para liberá-la
             suite.Release();
@@ -120,20 +120,20 @@ namespace testeSuites.Entities
         public void ShowStatus()
         {
             // Usando o método GetAll do repositório para obter todas as suítes
-            IEnumerable<ISuite> suites = repository.GetAll();
+            IEnumerable<ISuite> suites = Repository.GetAll();
 
             // Usando um foreach para iterar sobre as suítes e mostrar o seu número, tipo e status
             foreach (ISuite suite in suites)
             {
                 string type = suite switch
                 {
-                    SimpleSuite _ => "simples",
-                    LuxurySuite _ => "luxo",
-                    PresidentialSuite _ => "presidencial",
+                    SimpleSuite _ => "Simples",
+                    LuxurySuite _ => "Luxo",
+                    PresidentialSuite _ => "Pesidencial",
                     _ => "desconhecido"
                 };
 
-                Console.WriteLine($"Suíte {suite.Number}, tipo {type}, status {suite.Status}");
+                Console.WriteLine($"Suíte {type} n°{suite.Number} - Status: {suite.Status}");
             }
         }
     }
