@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="testeSuites.Program">
+    <Position X="5.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="testeSuites.Entities.BasicSuite">
+    <Position X="14.5" Y="1" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEQQAAAAAAAGAAAAAAAAAAAAAAAAACABAAAAA=</HashCode>
+      <FileName>Entities\BasicSuite.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="testeSuites.Entities.HotelSystem">
+    <Position X="7.25" Y="1" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAABMAAAAgACAAACAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Entities\HotelSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="testeSuites.Entities.InMemorySuiteRepository" BaseTypeListCollapsed="true">
+    <Position X="9.75" Y="1" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAABAAABAAAACAAAgAAAAAAAAA=</HashCode>
+      <FileName>Entities\InMemorySuiteRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="testeSuites.Entities.LuxurySuite">
+    <Position X="14.5" Y="4.75" Width="1.75" />
+    <InheritanceLine Type="testeSuites.Entities.BasicSuite" ManuallyRouted="true">
+      <Path>
+        <Point X="15.375" Y="3.709" />
+        <Point X="15.375" Y="4.229" />
+        <Point X="15.375" Y="4.229" />
+        <Point X="15.375" Y="4.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\LuxurySuite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="testeSuites.Entities.PresidentialSuite">
+    <Position X="16.5" Y="4.75" Width="1.75" />
+    <InheritanceLine Type="testeSuites.Entities.BasicSuite" ManuallyRouted="true">
+      <Path>
+        <Point X="15.375" Y="3.709" />
+        <Point X="15.375" Y="4.281" />
+        <Point X="17.375" Y="4.281" />
+        <Point X="17.375" Y="4.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\PresidentialSuite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="testeSuites.Entities.SimpleSuite">
+    <Position X="12.5" Y="4.75" Width="1.75" />
+    <InheritanceLine Type="testeSuites.Entities.BasicSuite" ManuallyRouted="true">
+      <Path>
+        <Point X="15.375" Y="3.709" />
+        <Point X="15.375" Y="4.281" />
+        <Point X="13.375" Y="4.281" />
+        <Point X="13.375" Y="4.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\SimpleSuite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="testeSuites.Entities.Interfaces.ISuite">
+    <Position X="9.75" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEQQAAAAAAAGAAAAAAAAAAAAAAAAACABAAAAA=</HashCode>
+      <FileName>Entities\Interfaces\ISuite.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="testeSuites.Entities.Interfaces.ISuiteRepository">
+    <Position X="7.25" Y="4.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAABAAABAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Entities\Interfaces\ISuiteRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="testeSuites.Entities.Enums.SuiteStatus">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Entities\Enums\SuiteStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
