@@ -1,8 +1,8 @@
 ﻿// Uma classe concreta para representar um sistema de hotel, que depende de uma abstração ISuiteRepository para gerenciar as suítes
 
-using testeSuites.Entities.Interfaces;
+using SistemaDeReservasHotel.Entities.Interfaces;
 
-namespace testeSuites.Entities
+namespace SistemaDeReservasHotel.Entities
 {
     public class HotelSystem
     {
@@ -134,6 +134,24 @@ namespace testeSuites.Entities
                 };
 
                 Console.WriteLine($"Suíte {type} n°{suite.Number} - Status: {suite.Status}");
+            }
+        }
+
+        public void SetupDefaultSuites()
+        {
+            for (int i = 100; i <= 199; i++)
+            {
+                Repository.Add(new SimpleSuite(i));
+            }
+
+            for (int i = 200; i <= 280; i++)
+            {
+                Repository.Add(new LuxurySuite(i));
+            }
+
+            for (int i = 300; i <= 330; i++)
+            {
+                Repository.Add(new PresidentialSuite(i));
             }
         }
     }

@@ -1,32 +1,17 @@
-﻿using testeSuites.Entities;
+﻿using SistemaDeReservasHotel.Entities;
 
-namespace testeSuites
+namespace SistemaDeReservasHotel
 {
     class Program
     {
         static void Main()
         {
             HotelSystem system = new(new InMemorySuiteRepository());
-            SetupSuites();
+
+            system.SetupDefaultSuites();
+
             PromptMenu();
 
-            void SetupSuites()
-            {
-                for (int i = 100; i <= 199; i++)
-                {
-                    system.CreateSuite("simples", i);
-                }
-
-                for (int i = 200; i <= 280; i++)
-                {
-                    system.CreateSuite("luxo", i);
-                }
-
-                for (int i = 300; i <= 330; i++)
-                {
-                    system.CreateSuite("presidencial", i);
-                }
-            }
             void PromptMenu()
             {
                 while (true)
@@ -87,7 +72,7 @@ namespace testeSuites
                     Console.WriteLine("");
                     system.ReserveSuite(n);
                     Console.WriteLine("\n\nAperte qualquer tecla para voltar ao menu.");
-                    Console.ReadLine();
+                    Console.ReadKey();
                     Console.Clear();
                 }
                 else
@@ -105,7 +90,7 @@ namespace testeSuites
                     Console.WriteLine("");
                     system.CancelReservation(n);
                     Console.WriteLine("\n\nAperte qualquer tecla para voltar ao menu.");
-                    Console.ReadLine();
+                    Console.ReadKey();
                     Console.Clear();
                 }
                 else
@@ -123,7 +108,7 @@ namespace testeSuites
                     Console.WriteLine("");
                     system.OccupySuite(n);
                     Console.WriteLine("\n\nAperte qualquer tecla para voltar ao menu.");
-                    Console.ReadLine();
+                    Console.ReadKey();
                     Console.Clear();
                 }
                 else
@@ -141,7 +126,7 @@ namespace testeSuites
                     Console.WriteLine("");
                     system.ReleaseSuite(n);
                     Console.WriteLine("\n\nAperte qualquer tecla para voltar ao menu.");
-                    Console.ReadLine();
+                    Console.ReadKey();
                     Console.Clear();
                 }
                 else
@@ -155,7 +140,7 @@ namespace testeSuites
                 Console.WriteLine("\n            SUÍTES   \n");
                 system.ShowStatus();
                 Console.WriteLine("\n\nAperte qualquer tecla para voltar ao menu.");
-                Console.ReadLine();
+                Console.ReadKey();
                 Console.Clear();
             }
         }

@@ -1,8 +1,8 @@
 ﻿// Uma classe concreta para representar um repositório de suítes em memória, que implementa a interface ISuiteRepository e usa uma lista interna para armazenar as suítes
 
-using testeSuites.Entities.Interfaces;
+using SistemaDeReservasHotel.Entities.Interfaces;
 
-namespace testeSuites.Entities
+namespace SistemaDeReservasHotel.Entities
 {
     public class InMemorySuiteRepository : ISuiteRepository
     {

@@ -1,4 +1,4 @@
-﻿namespace testeSuites.Entities
+﻿namespace SistemaDeReservasHotel.Entities
 {
     public class SimpleSuite : BasicSuite
     {

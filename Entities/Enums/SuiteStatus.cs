@@ -1,6 +1,6 @@
 ﻿// Uma enumeração para representar o status de uma suíte
 
-namespace testeSuites.Entities.Enums
+namespace SistemaDeReservasHotel.Entities.Enums
 {
     public enum SuiteStatus
     {

@@ -1,9 +1,9 @@
 ﻿// Uma classe abstrata para representar uma suíte básica, que implementa a interface ISuite
 
-using testeSuites.Entities.Enums;
-using testeSuites.Entities.Interfaces;
+using SistemaDeReservasHotel.Entities.Enums;
+using SistemaDeReservasHotel.Entities.Interfaces;
 
-namespace testeSuites.Entities
+namespace SistemaDeReservasHotel.Entities
 {
     public abstract class BasicSuite : ISuite
     {

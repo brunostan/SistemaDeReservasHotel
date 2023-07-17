@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
-  <Class Name="testeSuites.Entities.BasicSuite">
+  <Class Name="SistemaDeReservasHotel.Entities.BasicSuite">
     <Position X="5.75" Y="1.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAEQQAAAAAAAGAAAAAAAAAAAAAAAAACABAAAAA=</HashCode>
@@ -8,14 +8,14 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="testeSuites.Entities.HotelSystem">
+  <Class Name="SistemaDeReservasHotel.Entities.HotelSystem">
     <Position X="10" Y="1.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAACAAABMAAAAgACAAACAAAAAAQAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAIAAAAAAAABMAAAAgACAAACAAAAAAQAAAAAAAA=</HashCode>
       <FileName>Entities\HotelSystem.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="testeSuites.Entities.InMemorySuiteRepository" BaseTypeListCollapsed="true">
+  <Class Name="SistemaDeReservasHotel.Entities.InMemorySuiteRepository" BaseTypeListCollapsed="true">
     <Position X="12.75" Y="1.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAAAAAAAABAAABAAAACAAAgAAAAAAAAA=</HashCode>
@@ -23,73 +23,49 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="testeSuites.Entities.LuxurySuite">
+  <Class Name="SistemaDeReservasHotel.Entities.LuxurySuite">
     <Position X="5.75" Y="5.25" Width="1.75" />
-    <InheritanceLine Type="testeSuites.Entities.BasicSuite" ManuallyRouted="true">
-      <Path>
-        <Point X="6.625" Y="4.209" />
-        <Point X="6.625" Y="4.229" />
-        <Point X="6.625" Y="4.229" />
-        <Point X="6.625" Y="5.25" />
-      </Path>
-    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\LuxurySuite.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="testeSuites.Entities.PresidentialSuite">
+  <Class Name="SistemaDeReservasHotel.Entities.PresidentialSuite">
     <Position X="7.75" Y="5.25" Width="1.75" />
-    <InheritanceLine Type="testeSuites.Entities.BasicSuite" ManuallyRouted="true">
-      <Path>
-        <Point X="6.625" Y="4.209" />
-        <Point X="6.625" Y="4.75" />
-        <Point X="8.625" Y="4.75" />
-        <Point X="8.625" Y="5.25" />
-      </Path>
-    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\PresidentialSuite.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="testeSuites.Entities.SimpleSuite">
+  <Class Name="SistemaDeReservasHotel.Entities.SimpleSuite">
     <Position X="3.75" Y="5.25" Width="1.75" />
-    <InheritanceLine Type="testeSuites.Entities.BasicSuite" ManuallyRouted="true">
-      <Path>
-        <Point X="6.625" Y="4.209" />
-        <Point X="6.625" Y="4.75" />
-        <Point X="4.625" Y="4.75" />
-        <Point X="4.625" Y="5.25" />
-      </Path>
-    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\SimpleSuite.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="testeSuites.Program">
+  <Class Name="SistemaDeReservasHotel.Program">
     <Position X="8" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="testeSuites.Entities.Interfaces.ISuite">
+  <Interface Name="SistemaDeReservasHotel.Entities.Interfaces.ISuite">
     <Position X="12.75" Y="4" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAEQQAAAAAAAGAAAAAAAAAAAAAAAAACABAAAAA=</HashCode>
       <FileName>Entities\Interfaces\ISuite.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="testeSuites.Entities.Interfaces.ISuiteRepository">
+  <Interface Name="SistemaDeReservasHotel.Entities.Interfaces.ISuiteRepository">
     <Position X="10" Y="4.75" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAAAAAAAABAAABAAAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>Entities\Interfaces\ISuiteRepository.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Enum Name="testeSuites.Entities.Enums.SuiteStatus">
+  <Enum Name="SistemaDeReservasHotel.Entities.Enums.SuiteStatus">
     <Position X="8" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAEAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>

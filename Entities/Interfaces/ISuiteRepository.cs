@@ -3,7 +3,7 @@
 
 // Uma interface para representar um repositório de suítes, que permite adicionar, remover e obter suítes
 
-namespace testeSuites.Entities.Interfaces
+namespace SistemaDeReservasHotel.Entities.Interfaces
 {
     public interface ISuiteRepository
     {

@@ -4,9 +4,9 @@
 
 // Uma interface para representar uma suíte de hotel
 
-using testeSuites.Entities.Enums;
+using SistemaDeReservasHotel.Entities.Enums;
 
-namespace testeSuites.Entities.Interfaces
+namespace SistemaDeReservasHotel.Entities.Interfaces
 {
     public interface ISuite
     {
