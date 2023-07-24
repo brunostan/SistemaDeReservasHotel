@@ -142,16 +142,19 @@ namespace SistemaDeReservasHotel.Entities
             for (int i = 100; i <= 199; i++)
             {
                 Repository.Add(new SimpleSuite(i));
+                Console.Clear();
             }
 
             for (int i = 200; i <= 280; i++)
             {
                 Repository.Add(new LuxurySuite(i));
+                Console.Clear();
             }
 
             for (int i = 300; i <= 330; i++)
             {
                 Repository.Add(new PresidentialSuite(i));
+                Console.Clear();
             }
         }
 
